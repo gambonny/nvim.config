@@ -3,6 +3,7 @@
   "accelerated-jk.nvim": { "branch": "main", "commit": "8fb5dad4ccc1811766cebf16b544038aeeb7806f" },
   "better-escape.vim": { "branch": "master", "commit": "6b16a45a839727977277f6ab11bded63e9ed86bb" },
   "buffer-closer.nvim": { "branch": "main", "commit": "edb2fa2c188a6914ba922ac46f98047c148bc5ed" },
+  "buffer-reopen.nvim": { "branch": "main", "commit": "e08dfc4bfea21bbb771f24e1dd032b437a0f8401" },
   "fix-auto-scroll.nvim": { "branch": "main", "commit": "c211a42f4030c9ed03a1456919917cdf1a193bd9" },
   "lazy.nvim": { "branch": "main", "commit": "7527af40ddd4a93a02911be570b32609b9d4ea53" },
   "nvim-web-devicons": { "branch": "master", "commit": "402377242b04be3f4f0f3720bd952df86e946c30" },
