@@ -7,6 +7,7 @@ return {
       highlight = { enable = true },
       indent = { enable = true },
       incremental_selection = { enable = true },
+      matchup = { enable = true },
     })
   end
 }
