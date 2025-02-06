@@ -5,6 +5,7 @@
   "buffer-closer.nvim": { "branch": "main", "commit": "edb2fa2c188a6914ba922ac46f98047c148bc5ed" },
   "buffer-reopen.nvim": { "branch": "main", "commit": "e08dfc4bfea21bbb771f24e1dd032b437a0f8401" },
   "fix-auto-scroll.nvim": { "branch": "main", "commit": "c211a42f4030c9ed03a1456919917cdf1a193bd9" },
+  "flash.nvim": { "branch": "main", "commit": "f899265876ecdcf7352dbc9f0adf87068cedefbb" },
   "lazy.nvim": { "branch": "main", "commit": "f15a93907ddad3d9139aea465ae18336d87f5ce6" },
   "nvim-web-devicons": { "branch": "master", "commit": "402377242b04be3f4f0f3720bd952df86e946c30" },
   "nvim-window": { "branch": "main", "commit": "93af78311e53919a0b13d1bf6d857880bb0b975d" },

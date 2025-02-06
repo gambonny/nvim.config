@@ -18,7 +18,7 @@ return {
     end, "move cursor up")
     utils.map_key("n", "<leader>1r", function()
       require("smart-splits").move_cursor_previous()
-    end, "move cursor up")
+    end, "jump to last visited split")
 
     -- resize
     utils.map_key("n", "<leader>@r", function()
