@@ -1,1 +1,7 @@
-return { "m-demare/hlargs.nvim", config = true }
+return {
+  "m-demare/hlargs.nvim",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+  },
+  config = true
+}
