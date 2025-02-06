@@ -19,6 +19,7 @@
   "nvim-window": { "branch": "main", "commit": "93af78311e53919a0b13d1bf6d857880bb0b975d" },
   "paren-hint.nvim": { "branch": "main", "commit": "6d38236faf4eb19ab0ae001de6e2a1c7b88e2ad2" },
   "smart-splits.nvim": { "branch": "master", "commit": "fc7bb00fe67ab504356bed4310d23c2e4cb4b06b" },
+  "snacks.nvim": { "branch": "main", "commit": "4a6ed6912e5b5cabeb3c3dbbecaedf7a1c743256" },
   "spaceless.nvim": { "branch": "main", "commit": "927fb0afb416ea39306af5842c247d810dfd5938" },
   "tokyonight.nvim": { "branch": "main", "commit": "dca4adba7dc5f09302a00b0e76078d54d82d2658" },
   "vim-lastplace": { "branch": "master", "commit": "e58cb0df716d3c88605ae49db5c4741db8b48aa9" },
