@@ -7,6 +7,7 @@
   "fix-auto-scroll.nvim": { "branch": "main", "commit": "c211a42f4030c9ed03a1456919917cdf1a193bd9" },
   "lazy.nvim": { "branch": "main", "commit": "7527af40ddd4a93a02911be570b32609b9d4ea53" },
   "nvim-web-devicons": { "branch": "master", "commit": "402377242b04be3f4f0f3720bd952df86e946c30" },
+  "smart-splits.nvim": { "branch": "master", "commit": "fc7bb00fe67ab504356bed4310d23c2e4cb4b06b" },
   "spaceless.nvim": { "branch": "main", "commit": "927fb0afb416ea39306af5842c247d810dfd5938" },
   "tokyonight.nvim": { "branch": "main", "commit": "dca4adba7dc5f09302a00b0e76078d54d82d2658" },
   "vim-lastplace": { "branch": "master", "commit": "e58cb0df716d3c88605ae49db5c4741db8b48aa9" },
