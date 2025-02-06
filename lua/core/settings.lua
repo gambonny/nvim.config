@@ -57,7 +57,6 @@ opt.autoread = true
 -- Performance Tweaks
 opt.timeoutlen = 500
 opt.updatetime = 250
-opt.lazyredraw = true
 opt.ttyfast = true
 
 -- Undo History
