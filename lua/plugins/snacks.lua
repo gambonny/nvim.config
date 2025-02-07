@@ -8,8 +8,10 @@ return {
     git = {
       patterns = { "GitSign" },
     },
+    picker = {},
   },
   keys = {
     { "<leader>'", function() Snacks.explorer({ git_status_open = true }) end, desc = "File Explorer" },
+    { "<leader><leader>", function() Snacks.picker.files() end, desc = "Find Files" }
   }
 }
