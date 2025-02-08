@@ -5,7 +5,7 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     require("gitsigns").setup({
-      on_attach = function(bufnr)
+      on_attach = function()
         local gs = package.loaded.gitsigns
 
         -- Navigation

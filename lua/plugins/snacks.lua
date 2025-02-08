@@ -5,6 +5,7 @@ return {
   ---@type snacks.Config
   opts = {
     explorer = { replace_netrw = true },
+    bufdelete = {},
     git = {
       patterns = { "GitSign" },
     },
@@ -57,6 +58,22 @@ return {
         })
       end,
       desc = "[P]Snacks picker buffers",
+    },
+    {
+      "<leader><space>",
+      function()
+        Snacks.bufdelete.delete({
+          wipe = true,
+        })
+      end,
+      desc = "Delete buffer keeping layout",
+    },
+    {
+      "<leader>@d",
+      function()
+        Snacks.bufdelete.other({})
+      end,
+      desc = "Delete buffer keeping layout",
     },
   },
 }
