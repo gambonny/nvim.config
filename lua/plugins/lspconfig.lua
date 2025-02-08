@@ -6,9 +6,11 @@ return {
   dependencies = {
     { "williamboman/mason.nvim", config = true }, -- LSP installer
     { "williamboman/mason-lspconfig.nvim", config = true }, -- Mason + lspconfig bridge
+    { "saghen/blink.cmp" }, -- Autocompletion engine
   },
   config = function()
     local mason_lspconfig = require("mason-lspconfig")
+    local capabilities = require("blink.cmp").get_lsp_capabilities()
 
     -- Ensure LSP servers are installed
     mason_lspconfig.setup({
@@ -17,11 +19,12 @@ return {
 
     local lspconfig = require("lspconfig")
 
-    lspconfig.ts_ls.setup({})
-    lspconfig.astro.setup({})
-    lspconfig.html.setup({})
+    lspconfig.ts_ls.setup({ capabilities = capabilities })
+    lspconfig.astro.setup({ capabilitites = capabilities })
+    lspconfig.html.setup({ capabilities = capabilities })
 
     lspconfig.lua_ls.setup({
+      capabilities = capabilities,
       settings = {
         Lua = {
           diagnostics = {
