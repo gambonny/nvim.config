@@ -4,10 +4,10 @@ return {
   opts = {
     keymaps = {
       useDefaults = true,
-        disabledDefaults = {
+      disabledDefaults = {
         "in",
         "an",
       },
-    }
+    },
   },
 }

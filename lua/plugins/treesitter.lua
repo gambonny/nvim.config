@@ -9,6 +9,5 @@ return {
       incremental_selection = { enable = true },
       matchup = { enable = true },
     })
-  end
+  end,
 }
-

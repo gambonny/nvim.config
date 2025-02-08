@@ -1,4 +1,4 @@
 return {
-  'iamyoki/buffer-reopen.nvim',
+  "iamyoki/buffer-reopen.nvim",
   opts = {},
 }
