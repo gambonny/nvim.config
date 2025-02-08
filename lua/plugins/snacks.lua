@@ -75,6 +75,27 @@ return {
       desc = "Delete buffer keeping layout",
     },
     {
+      "<leader>ss",
+      function()
+        Snacks.picker.lsp_symbols({ layout = { preset = "vscode", preview = "main" } })
+      end,
+      desc = "Symbols preview",
+    },
+    {
+      "<leader>sr",
+      function()
+        Snacks.picker.resume()
+      end,
+      desc = "Resume",
+    },
+    {
+      "<leader>su",
+      function()
+        Snacks.picker.undo()
+      end,
+      desc = "Undo History",
+    },
+    {
       "<leader>@d",
       function()
         Snacks.bufdelete.other({})
