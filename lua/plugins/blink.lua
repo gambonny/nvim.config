@@ -1,5 +1,6 @@
 return {
   "saghen/blink.cmp",
+  dependencies = { "mikavilpas/blink-ripgrep.nvim" },
   version = "*",
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
@@ -8,7 +9,15 @@ return {
     -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
     -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
     -- See the full "keymap" documentation for information on defining your own keymap.
-    keymap = { preset = "super-tab" },
+    keymap = {
+      preset = "super-tab",
+      ["<c-g>"] = {
+        function()
+          -- invoke manually, requires blink >v0.8.0
+          require("blink-cmp").show({ providers = { "ripgrep" } })
+        end,
+      },
+    },
 
     appearance = {
       -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -49,11 +58,26 @@ return {
         show_documentation = true,
       },
     },
-
-    -- Default list of enabled providers defined so that you can extend it
-    -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { "lsp", "path", "snippets", "buffer" },
+      default = { "lsp", "path", "buffer" },
+      providers = {
+        ripgrep = {
+          module = "blink-ripgrep",
+          name = "Ripgrep",
+          ---@module "blink-ripgrep"
+          ---@type blink-ripgrep.Options
+          opts = {
+            transform_items = function(_, items)
+              for _, item in ipairs(items) do
+                item.labelDetails = {
+                  description = "(rg)",
+                }
+              end
+              return items
+            end,
+          },
+        },
+      },
     },
     completion = {
       list = {
