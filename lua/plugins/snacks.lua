@@ -6,11 +6,15 @@ return {
   opts = {
     explorer = { replace_netrw = true },
     bufdelete = {},
+    dim = {},
     git = {
       patterns = { "GitSign" },
     },
     indent = {},
     input = {},
+    toggle = {},
+    words = {},
+    zen = {},
     picker = {
       sources = {
         files = {
@@ -74,6 +78,20 @@ return {
       "<leader>@d",
       function()
         Snacks.bufdelete.other({})
+      end,
+      desc = "Delete buffer keeping layout",
+    },
+    {
+      "<leader>zz",
+      function()
+        Snacks.zen.zen()
+      end,
+      desc = "Delete buffer keeping layout",
+    },
+    {
+      "<leader>zo",
+      function()
+        Snacks.zen.zoom()
       end,
       desc = "Delete buffer keeping layout",
     },
