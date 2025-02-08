@@ -7,6 +7,7 @@ return {
     { "williamboman/mason.nvim", config = true }, -- LSP installer
     { "williamboman/mason-lspconfig.nvim", config = true }, -- Mason + lspconfig bridge
     { "saghen/blink.cmp" }, -- Autocompletion engine
+    { "zeioth/garbage-day.nvim", config = true }, -- Stops inactive LSP clients to free RAM
   },
   config = function()
     local mason_lspconfig = require("mason-lspconfig")
