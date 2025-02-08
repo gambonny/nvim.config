@@ -9,6 +9,7 @@ return {
     git = {
       patterns = { "GitSign" },
     },
+    indent = {},
     picker = {
       sources = {
         files = {
