@@ -1,3 +1,5 @@
+local utils = require("core.utils")
+
 return {
   "mfussenegger/nvim-lint",
   config = function()
@@ -16,5 +18,15 @@ return {
         require("lint").try_lint()
       end,
     })
+
+    -- Send diagnostics to quickfix
+    utils.map_key("n", "<leader>dq", function()
+      vim.diagnostic.setqflist()
+    end, "Send diagnostics to quickfix")
+
+    -- Send diagnostics to loclist
+    utils.map_key("n", "<leader>lq", function()
+      vim.diagnostic.setloclist()
+    end, "Send diagnostics to loclist")
   end,
 }
