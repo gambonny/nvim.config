@@ -8,7 +8,17 @@ return {
     git = {
       patterns = { "GitSign" },
     },
-    picker = {},
+    picker = {
+      sources = {
+        files = {
+          layout = {
+            preset = function()
+              return vim.o.columns >= 120 and "ivy" or "vertical"
+            end,
+          },
+        },
+      },
+    },
   },
   keys = {
     {
@@ -21,13 +31,7 @@ return {
     {
       "<leader><leader>",
       function()
-        Snacks.picker.files({
-          finder = "files",
-          format = "file",
-          show_empty = true,
-          supports_live = true,
-          layout = "ivy",
-        })
+        Snacks.picker.files()
       end,
       desc = "Find Files",
     },
