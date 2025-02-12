@@ -43,6 +43,17 @@ return {
       desc = "Find Files",
     },
     {
+      "<leader>sp",
+      function()
+        Snacks.picker.projects({
+          dev = "~/urrepo/three/packages/",
+          projects = { "~/urrepo/three/" },
+          recent = false,
+        })
+      end,
+      desc = "Projects",
+    },
+    {
       "<leader>,",
       function()
         Snacks.picker.buffers({
@@ -75,7 +86,7 @@ return {
       desc = "Delete buffer keeping layout",
     },
     {
-      "<leader>ss",
+      "<leader>=",
       function()
         Snacks.picker.lsp_symbols({ layout = { preset = "vscode", preview = "main" } })
       end,
