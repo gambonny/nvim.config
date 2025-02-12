@@ -48,6 +48,6 @@ return {
     map_key("n", "[d", vim.diagnostic.goto_prev, "Previous diagnostic")
     map_key("n", "]d", vim.diagnostic.goto_next, "Next diagnostic")
     map_key("n", "<leader>e", vim.diagnostic.open_float, "Open diagnostic tooltip")
-    map_key("n", "<leader>q", vim.diagnostic.setloclist, "Set location list")
+    map_key("n", "<leader>qd", vim.diagnostic.setloclist, "Set location list")
   end,
 }

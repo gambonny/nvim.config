@@ -62,7 +62,7 @@ return {
           gs.diffthis("~")
         end, "Gitsigns diff this -")
         utils.map_key("n", "<leader>ht", gs.toggle_deleted, "Gitsigns toggle deleted")
-        utils.map_key("n", "<leader>hq", "Gitsigns setqflist", "Gitsigns qflist")
+        utils.map_key("n", "<leader>qh", "Gitsigns setqflist", "Gitsigns qflist")
       end,
     })
     require("scrollbar.handlers.gitsigns").setup()
