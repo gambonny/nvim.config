@@ -1,3 +1,8 @@
+function cd_up(picker)
+  picker:set_cwd(vim.fs.dirname(picker:cwd()))
+  picker:find()
+end
+
 return {
   "folke/snacks.nvim",
   priority = 1000,
@@ -23,6 +28,18 @@ return {
               return vim.o.columns >= 120 and "ivy" or "vertical"
             end,
           },
+          actions = {
+            cd_up = function(picker, _)
+              cd_up(picker)
+            end,
+          },
+          win = {
+            input = {
+              keys = {
+                ["<c-u>"] = { "cd_up", desc = "cd_up", mode = { "i", "n" } },
+              },
+            },
+          },
         },
       },
     },
@@ -31,7 +48,7 @@ return {
     {
       "<leader>'",
       function()
-        Snacks.explorer({ git_status_open = true })
+        Snacks.explorer({ git_status_open = true, focus = "list", enter = false })
       end,
       desc = "File Explorer",
     },
@@ -43,6 +60,20 @@ return {
       desc = "Find Files",
     },
     {
+      "<leader>G",
+      function()
+        Snacks.picker.git_status()
+      end,
+      desc = "Git Status",
+    },
+    {
+      "<leader>.",
+      function()
+        Snacks.picker.files({ cwd = vim.fn.expand("%:p:h") })
+      end,
+      desc = "Find adjacent files",
+    },
+    {
       "<leader>sp",
       function()
         Snacks.picker.projects({
@@ -52,6 +83,26 @@ return {
         })
       end,
       desc = "Projects",
+    },
+    {
+      "<leader>/",
+      function()
+        Snacks.picker.grep()
+      end,
+    },
+    {
+      "<leader>sd",
+      function()
+        Snacks.picker.git_diff()
+      end,
+      desc = "Git Diff (Hunks)",
+    },
+    {
+      "<leader>sc",
+      function()
+        Snacks.picker.commands()
+      end,
+      desc = "Commands",
     },
     {
       "<leader>,",
