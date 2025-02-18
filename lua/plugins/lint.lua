@@ -8,6 +8,8 @@ return {
       javascript = { "eslint_d" },
       typescript = { "eslint_d" },
       javascriptreact = { "eslint_d" },
+      typescriptreact = { "eslint_d" },
+      astro = { "eslint_d" },
       json = { "jsonlint" },
       markdown = { "markdownlint" },
     }

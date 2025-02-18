@@ -4,7 +4,7 @@ return {
   "mrjones2014/smart-splits.nvim",
   config = function()
     -- move
-    utils.map_key("n", "<leader>lh", function()
+    utils.map_key("n", "6", function()
       require("smart-splits").move_cursor_left()
     end, "move cursor left")
     utils.map_key("n", "@", function()
@@ -16,7 +16,7 @@ return {
     utils.map_key("n", "5", function()
       require("smart-splits").move_cursor_up()
     end, "move cursor up")
-    utils.map_key("n", "6", function()
+    utils.map_key("n", "<leader>lr", function()
       require("smart-splits").move_cursor_previous()
     end, "jump to last visited split")
 

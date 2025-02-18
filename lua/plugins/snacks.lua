@@ -36,7 +36,7 @@ return {
           win = {
             input = {
               keys = {
-                ["<c-u>"] = { "cd_up", desc = "cd_up", mode = { "i", "n" } },
+                ["<c-.>"] = { "cd_up", desc = "cd_up", mode = { "i", "n" } },
               },
             },
           },
