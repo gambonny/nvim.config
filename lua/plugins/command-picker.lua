@@ -27,7 +27,7 @@ return {
       },
     })
 
-    utils.map_key("n", "<leader>cc", function()
+    utils.map_key("n", "<leader>*", function()
       require("commandpicker").open({
         layout = "vscode",
       })
