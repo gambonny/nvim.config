@@ -7,6 +7,9 @@ return {
   },
   config = function()
     require("noice").setup({
+      messages = {
+        view = "mini",
+      },
       presets = {
         bottom_search = true,
         command_palette = true,
