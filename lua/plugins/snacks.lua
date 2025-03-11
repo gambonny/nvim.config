@@ -74,17 +74,6 @@ return {
       desc = "Find adjacent files",
     },
     {
-      "<leader>sp",
-      function()
-        Snacks.picker.projects({
-          dev = "~/urrepo/three/packages/",
-          projects = { "~/urrepo/three/" },
-          recent = false,
-        })
-      end,
-      desc = "Projects",
-    },
-    {
       "<leader>/",
       function()
         Snacks.picker.grep()
