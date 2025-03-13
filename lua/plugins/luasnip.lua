@@ -23,6 +23,7 @@ return {
     require("luasnip").filetype_extend("typescriptreact", { "ts" })
     require("luasnip").filetype_extend("typescript", { "ts" })
     require("luasnip").filetype_extend("javascript", { "ts" })
+    require("luasnip").filetype_extend("astro", { "ts" })
 
     utils.map_key("i", "<A-u>", function()
       require("luasnip").jump(1)

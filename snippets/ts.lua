@@ -52,7 +52,12 @@ return {
     i(0),
     t("}"),
   }, { hidden = true }),
-  s({ trig = ",pnd", snippetType = "autosnippet" }, {
+  s({ trig = ",class", snippetType = "autosnippet" }, {
+    t("class={css({"),
+    i(1),
+    t("})}"),
+  }),
+  s({ trig = ",name", snippetType = "autosnippet" }, {
     t("className={css({"),
     i(1),
     t("})}"),
