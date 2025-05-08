@@ -1,9 +1,9 @@
 return {
-  "folke/tokyonight.nvim",
+  "webhooked/kanso.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
   init = function()
-    vim.cmd.colorscheme("tokyonight")
+    vim.cmd.colorscheme("kanso")
   end,
 }
