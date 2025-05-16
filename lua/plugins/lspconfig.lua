@@ -4,19 +4,11 @@ local map_key = keymap_utils.map_key
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-    { "williamboman/mason.nvim", config = true }, -- LSP installer
-    { "williamboman/mason-lspconfig.nvim", config = true }, -- Mason + lspconfig bridge
     { "saghen/blink.cmp" }, -- Autocompletion engine
     { "zeioth/garbage-day.nvim", config = true }, -- Stops inactive LSP clients to free RAM
   },
   config = function()
-    local mason_lspconfig = require("mason-lspconfig")
     local capabilities = require("blink.cmp").get_lsp_capabilities()
-
-    -- Ensure LSP servers are installed
-    mason_lspconfig.setup({
-      ensure_installed = { "ts_ls", "lua_ls", "astro", "html", "biome" },
-    })
 
     local lspconfig = require("lspconfig")
 
