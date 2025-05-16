@@ -15,7 +15,7 @@ return {
 
     -- Ensure LSP servers are installed
     mason_lspconfig.setup({
-      ensure_installed = { "ts_ls", "lua_ls", "astro", "html" },
+      ensure_installed = { "ts_ls", "lua_ls", "astro", "html", "biome" },
     })
 
     local lspconfig = require("lspconfig")
@@ -23,6 +23,7 @@ return {
     lspconfig.ts_ls.setup({ capabilities = capabilities })
     lspconfig.astro.setup({ capabilitites = capabilities })
     lspconfig.html.setup({ capabilities = capabilities })
+    lspconfig.biome.setup({ capabilities = capabilities })
 
     lspconfig.lua_ls.setup({
       capabilities = capabilities,
