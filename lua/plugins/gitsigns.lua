@@ -5,16 +5,17 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     require("gitsigns").setup({
+      word_diff = true,
       on_attach = function()
         local gs = package.loaded.gitsigns
 
         -- Navigation
         utils.map_key(
           "n",
-          "]g",
+          "]h",
           function()
             if vim.wo.diff then
-              return "]g"
+              return "]h"
             end
             vim.schedule(function()
               gs.nav_hunk("next")
@@ -29,10 +30,10 @@ return {
 
         utils.map_key(
           "n",
-          "[g",
+          "[h",
           function()
             if vim.wo.diff then
-              return "[g"
+              return "[h"
             end
             vim.schedule(function()
               gs.nav_hunk("prev")

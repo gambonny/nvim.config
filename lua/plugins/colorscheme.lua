@@ -1,9 +1,9 @@
 return {
-  "EdenEast/nightfox.nvim",
+  "bluz71/vim-nightfly-colors",
+  name = "nightfly",
   lazy = false,
   priority = 1000,
-  opts = {},
   init = function()
-    vim.cmd.colorscheme("nightfox")
+    vim.cmd.colorscheme("nightfly")
   end,
 }
