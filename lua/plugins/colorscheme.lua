@@ -1,9 +1,9 @@
 return {
-  "Everblush/nvim",
-  name = "everblush",
+  -- "Koalhack/darcubox-nvim",
+  "wadackel/vim-dogrun",
   lazy = false,
   priority = 1000,
   init = function()
-    vim.cmd.colorscheme("everblush")
+    vim.cmd.colorscheme("dogrun")
   end,
 }

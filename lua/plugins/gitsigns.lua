@@ -5,7 +5,7 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     require("gitsigns").setup({
-      word_diff = true,
+      word_diff = false,
       on_attach = function()
         local gs = package.loaded.gitsigns
 

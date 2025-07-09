@@ -1,3 +1,5 @@
+local workspace_picker = require("monorepo.picker")
+
 function cd_up(picker)
   picker:set_cwd(vim.fs.dirname(picker:cwd()))
   picker:find()
@@ -21,7 +23,23 @@ return {
     words = {},
     zen = {},
     picker = {
+      finders = {
+        monorepo_packages = { source = "monorepo_packages" },
+      },
       sources = {
+        monorepo_packages = {
+          get_items = function()
+            return workspace_picker.get_monorepo_packages()
+          end,
+          format_item = function(item)
+            return item.name
+          end,
+          select_item = function(item)
+            vim.cmd.cd(item.path)
+            vim.notify("Switched to " .. item.name .. " at " .. item.path)
+          end,
+          layout = "vscode",
+        },
         files = {
           layout = {
             preset = function()
@@ -166,6 +184,13 @@ return {
         Snacks.zen.zoom()
       end,
       desc = "Delete buffer keeping layout",
+    },
+    {
+      "<leader>sp",
+      function()
+        require("monorepo.picker").show_packages()
+      end,
+      desc = "Switch to monorepo package",
     },
   },
 }
