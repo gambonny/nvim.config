@@ -73,7 +73,9 @@ return {
     {
       "<leader><leader>",
       function()
-        Snacks.picker.files()
+        Snacks.picker.files({
+          layout = "vscode",
+        })
       end,
       desc = "Find Files",
     },
@@ -87,7 +89,7 @@ return {
     {
       "<leader>.",
       function()
-        Snacks.picker.files({ cwd = vim.fn.expand("%:p:h") })
+        Snacks.picker.files({ cwd = vim.fn.expand("%:p:h"), layout = "vscode" })
       end,
       desc = "Find adjacent files",
     },
