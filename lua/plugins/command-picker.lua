@@ -13,15 +13,21 @@ return {
           end,
         },
         {
+          desc = "Copy current buffer to clipboard",
+          cmd = function()
+            vim.api.nvim_exec2("CopyCurrentBufferToClipboard", { output = false })
+          end,
+        },
+        {
           desc = "Copy quickfix files to clipboard",
           cmd = function()
             vim.api.nvim_exec2("CopyQuickfixFilesToClipboard", { output = false })
           end,
         },
         {
-          desc = "Copy current buffer to clipboard",
+          desc = "Delete all TrailBlazer marks",
           cmd = function()
-            vim.api.nvim_exec2("CopyCurrentBufferToClipboard", { output = false })
+            vim.api.nvim_exec2("TrailBlazerDeleteAllTrailMarks", { output = false })
           end,
         },
       },
