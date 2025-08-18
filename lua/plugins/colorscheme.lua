@@ -1,8 +1,9 @@
 return {
-  "hyperb1iss/silkcircuit-nvim",
+  "thesimonho/kanagawa-paper.nvim",
   lazy = false,
   priority = 1000,
+  opts = {},
   config = function()
-    vim.cmd.colorscheme("silkcircuit")
+    vim.cmd.colorscheme("kanagawa-paper")
   end,
 }
