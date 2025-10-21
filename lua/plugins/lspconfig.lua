@@ -1,29 +1,27 @@
+-- File: lua/plugins/lspconfig.lua
 local keymap_utils = require("core.utils")
 local map_key = keymap_utils.map_key
 
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-    { "saghen/blink.cmp" }, -- Autocompletion engine
-    { "zeioth/garbage-day.nvim", config = true }, -- Stops inactive LSP clients to free RAM
+    { "saghen/blink.cmp" },
+    { "zeioth/garbage-day.nvim", config = true },
   },
   config = function()
     local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-    local lspconfig = require("lspconfig")
+    -- Define configs
+    vim.lsp.config("ts_ls", { capabilities = capabilities })
+    vim.lsp.config("astro", { capabilities = capabilities })
+    vim.lsp.config("html", { capabilities = capabilities })
+    vim.lsp.config("biome", { capabilities = capabilities })
 
-    lspconfig.ts_ls.setup({ capabilities = capabilities })
-    lspconfig.astro.setup({ capabilitites = capabilities })
-    lspconfig.html.setup({ capabilities = capabilities })
-    lspconfig.biome.setup({ capabilities = capabilities })
-
-    lspconfig.lua_ls.setup({
+    vim.lsp.config("lua_ls", {
       capabilities = capabilities,
       settings = {
         Lua = {
-          diagnostics = {
-            globals = { "vim", "Snacks" },
-          },
+          diagnostics = { globals = { "vim", "Snacks" } },
           workspace = {
             library = vim.api.nvim_get_runtime_file("", true),
             checkThirdParty = false,
@@ -33,6 +31,14 @@ return {
       },
     })
 
+    -- Enable (autostart based on filetype/root markers)
+    vim.lsp.enable("ts_ls")
+    vim.lsp.enable("astro")
+    vim.lsp.enable("html")
+    vim.lsp.enable("biome")
+    vim.lsp.enable("lua_ls")
+
+    -- Keymaps
     map_key("n", "gd", vim.lsp.buf.definition, "Go to definition")
     map_key("n", "K", vim.lsp.buf.hover, "Hover for info")
     map_key("n", "gi", vim.lsp.buf.implementation, "Go to implementation")
