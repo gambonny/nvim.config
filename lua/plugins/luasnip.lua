@@ -13,7 +13,7 @@ return {
       updateevents = "TextChanged,TextChangedI",
     })
 
-    vim.keymap.set({ "i", "s" }, "<C-E>", function()
+    vim.keymap.set({ "i", "s" }, "<A-b>", function()
       if ls.choice_active() then
         ls.change_choice(1)
       end
@@ -25,10 +25,10 @@ return {
     require("luasnip").filetype_extend("javascript", { "ts" })
     require("luasnip").filetype_extend("astro", { "ts" })
 
-    utils.map_key("i", "<A-u>", function()
+    utils.map_key("i", "<A-e>", function()
       require("luasnip").jump(1)
     end, "Luasnip jump next")
-    utils.map_key("n", "<A-u>", function()
+    utils.map_key("n", "<A-e>", function()
       require("luasnip").jump(1)
     end, "Luasnip jump next")
     utils.map_key("i", "<A-p>", function()

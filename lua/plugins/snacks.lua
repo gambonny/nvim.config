@@ -178,14 +178,14 @@ return {
       function()
         Snacks.zen.zen()
       end,
-      desc = "Delete buffer keeping layout",
+      desc = "Zen",
     },
     {
       "<leader>zo",
       function()
         Snacks.zen.zoom()
       end,
-      desc = "Delete buffer keeping layout",
+      desc = "Zoom",
     },
     {
       "<leader>sp",

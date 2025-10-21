@@ -30,6 +30,24 @@ return {
             vim.api.nvim_exec2("TrailBlazerDeleteAllTrailMarks", { output = false })
           end,
         },
+        {
+          desc = "List all marks current project (git)",
+          cmd = function()
+            vim.api.nvim_exec2("Markit mark list project", { output = false })
+          end,
+        },
+        {
+          desc = "List all marks current buffer",
+          cmd = function()
+            vim.api.nvim_exec2("Markit mark list buffer", { output = false })
+          end,
+        },
+        {
+          desc = "Delete all marks current buffer",
+          cmd = function()
+            vim.api.nvim_exec2("Markit mark delete buffer", { output = false })
+          end,
+        },
       },
     })
 
