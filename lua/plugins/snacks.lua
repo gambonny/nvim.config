@@ -27,6 +27,13 @@ return {
         monorepo_packages = { source = "monorepo_packages" },
       },
       sources = {
+        gh_diff = {
+          auto_close = false,
+          layout = {
+            preset = "right",
+            hidden = { "preview" },
+          },
+        },
         monorepo_packages = {
           get_items = function()
             return workspace_picker.get_monorepo_packages()
@@ -102,7 +109,7 @@ return {
     {
       "<leader>sd",
       function()
-        Snacks.picker.git_diff()
+        Snacks.picker.git_diff({ layout = "ivy" })
       end,
       desc = "Git Diff (Hunks)",
     },
@@ -173,6 +180,35 @@ return {
       end,
       desc = "Delete buffer keeping layout",
     },
+    {
+      "<leader>gi",
+      function()
+        Snacks.picker.gh_issue()
+      end,
+      desc = "GitHub Issues (open)",
+    },
+    {
+      "<leader>gI",
+      function()
+        Snacks.picker.gh_issue({ state = "all" })
+      end,
+      desc = "GitHub Issues (all)",
+    },
+    {
+      "<leader>gr",
+      function()
+        Snacks.picker.gh_pr()
+      end,
+      desc = "GitHub Pull Requests (open)",
+    },
+    {
+      "<leader>gR",
+      function()
+        Snacks.picker.gh_pr({ state = "all" })
+      end,
+      desc = "GitHub Pull Requests (all)",
+    },
+
     {
       "<leader>zz",
       function()
