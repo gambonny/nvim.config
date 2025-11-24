@@ -31,10 +31,10 @@ return {
     utils.map_key("n", "<A-e>", function()
       require("luasnip").jump(1)
     end, "Luasnip jump next")
-    utils.map_key("i", "<A-p>", function()
+    utils.map_key("i", "<A-b>", function()
       require("luasnip").jump(-1)
     end, "Luasnip jump prev")
-    utils.map_key("n", "<A-p>", function()
+    utils.map_key("n", "<A-b>", function()
       require("luasnip").jump(-1)
     end, "Luasnip jump prev")
   end,
