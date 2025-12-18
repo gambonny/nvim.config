@@ -7,6 +7,7 @@ return {
         view = {
           next_hunk = "]h",
           prev_hunk = "[h",
+          toggle_explorer = "<leader>/b",
         },
       },
     })

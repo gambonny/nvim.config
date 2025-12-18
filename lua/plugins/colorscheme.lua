@@ -1,9 +1,8 @@
 return {
-  "thesimonho/kanagawa-paper.nvim",
+  "nendix/zen.nvim",
   lazy = false,
   priority = 1000,
-  opts = {},
   config = function()
-    vim.cmd.colorscheme("kanagawa-paper-ink")
+    vim.cmd.colorscheme("zen")
   end,
 }
