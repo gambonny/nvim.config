@@ -60,7 +60,7 @@
   "vim-matchup": { "branch": "master", "commit": "1c276e12b49a83c1bdca74351187b8adea5da4b9" },
   "vim-system-copy": { "branch": "master", "commit": "f007ef29e559a6017d96bea42fcc5f43af792284" },
   "vimade": { "branch": "master", "commit": "266cb28a451448754eb8ae2a2a46d6ae526b33f8" },
-  "vscode-diff.nvim": { "branch": "main", "commit": "6475f9164aceafbe156fd66374f85d0f23aea254" },
+  "vscode-diff.nvim": { "branch": "main", "commit": "f44272d1bdb114df2e05c4ac4b91312eac506bf4" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
   "windowcolumns.nvim": { "branch": "master", "commit": "162246c33e24809a38f38228f71533eecc255740" },
   "zen.nvim": { "branch": "main", "commit": "9a60e3fbef521f754cb54a78106647873a50a8ae" }
