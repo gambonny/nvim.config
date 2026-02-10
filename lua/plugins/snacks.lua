@@ -78,6 +78,14 @@ return {
       desc = "File Explorer",
     },
     {
+      "<leader>s/",
+      function()
+        Snacks.recent({ git_status_open = true, focus = "list", enter = false })
+      end,
+      desc = "Recent Explorer",
+    },
+
+    {
       "<leader><leader>",
       function()
         Snacks.picker.files({
