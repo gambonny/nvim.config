@@ -1,9 +1,15 @@
 return {
-  "folke/tokyonight.nvim",
+  "metalelf0/kintsugi-nvim",
   lazy = false,
   priority = 1000,
-  opts = {},
   config = function()
-    vim.cmd([[colorscheme tokyonight]])
+    require("kintsugi").setup({
+      variant = "flared",
+      transparent = false,
+      terminal_colors = true,
+      bold_keywords = true,
+      italic_comments = false,
+    })
+    vim.cmd.colorscheme("kintsugi-flared")
   end,
 }
