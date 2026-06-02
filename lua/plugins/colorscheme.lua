@@ -1,15 +1,9 @@
 return {
-  "metalelf0/kintsugi-nvim",
+  "EdenEast/nightfox.nvim",
   lazy = false,
   priority = 1000,
+  opts = {},
   config = function()
-    require("kintsugi").setup({
-      variant = "flared",
-      transparent = false,
-      terminal_colors = true,
-      bold_keywords = true,
-      italic_comments = false,
-    })
-    vim.cmd.colorscheme("kintsugi-flared")
+    vim.cmd([[colorscheme nightfox]])
   end,
 }
