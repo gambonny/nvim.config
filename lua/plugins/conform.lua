@@ -8,7 +8,7 @@ return {
         javascriptreact = { "biome" },
         typescriptreact = { "biome" },
         astro = { "biome" },
-        json = { "jq" },
+        json = { "biome" },
         lua = { "stylua" },
       },
       format_on_save = {
