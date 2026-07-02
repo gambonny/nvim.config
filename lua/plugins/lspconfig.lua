@@ -15,7 +15,7 @@ return {
     vim.lsp.config("ts_ls", { capabilities = capabilities })
     vim.lsp.config("astro", { capabilities = capabilities })
     vim.lsp.config("html", { capabilities = capabilities })
-    vim.lsp.config("biome", { capabilities = capabilities })
+    vim.lsp.config("oxlint", { capabilities = capabilities })
 
     vim.lsp.config("lua_ls", {
       capabilities = capabilities,
@@ -35,7 +35,7 @@ return {
     vim.lsp.enable("ts_ls")
     vim.lsp.enable("astro")
     vim.lsp.enable("html")
-    vim.lsp.enable("biome")
+    vim.lsp.enable("oxlint")
     vim.lsp.enable("lua_ls")
 
     -- Keymaps

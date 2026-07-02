@@ -3,12 +3,12 @@ return {
   config = function()
     require("conform").setup({
       formatters_by_ft = {
-        javascript = { "biome" },
-        typescript = { "biome" },
-        javascriptreact = { "biome" },
-        typescriptreact = { "biome" },
-        astro = { "biome" },
-        json = { "biome" },
+        javascript = { "oxfmt" },
+        typescript = { "oxfmt" },
+        javascriptreact = { "oxfmt" },
+        typescriptreact = { "oxfmt" },
+        astro = { "oxfmt" },
+        json = { "oxfmt" },
         lua = { "stylua" },
       },
       format_on_save = {

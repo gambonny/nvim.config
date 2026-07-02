@@ -2,7 +2,7 @@ return {
   "esmuellert/codediff.nvim",
   dependencies = { "MunifTanjim/nui.nvim" },
   config = function()
-    require("vscode-diff").setup({
+    require("codediff").setup({
       keymaps = {
         view = {
           next_hunk = "]h",

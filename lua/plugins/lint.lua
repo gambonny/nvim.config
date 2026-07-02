@@ -5,11 +5,11 @@ return {
   config = function()
     require("lint").linters_by_ft = {
       lua = { "luacheck" },
-      javascript = { "biomejs" },
-      typescript = { "biomejs" },
-      javascriptreact = { "biomejs" },
-      typescriptreact = { "biomejs" },
-      astro = { "biomejs" },
+      javascript = { "oxlint" },
+      typescript = { "oxlint" },
+      javascriptreact = { "oxlint" },
+      typescriptreact = { "oxlint" },
+      astro = { "oxlint" },
       json = { "jsonlint" },
       markdown = { "markdownlint" },
     }
