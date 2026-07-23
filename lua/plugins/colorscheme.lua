@@ -1,9 +1,10 @@
 return {
-  "EdenEast/nightfox.nvim",
+  "mitander/flume.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
-  config = function()
-    vim.cmd([[colorscheme nightfox]])
+  config = function(_, opts)
+    require("flume").setup(opts)
+    vim.cmd.colorscheme("flume")
   end,
 }
